@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+:root{
+    --clr-primary-200: hsl(185, 75%, 39%);  
+    --clr-primary-400: hsl(229, 23%, 23%) ; 
+    --clr-primary-600: hsl(227, 10%, 46%); 
+
+    --clr-neutral-50: hsl(0, 0%, 59%); 
+    --clr-neutral-100: hsl(0, 0%, 100%); 
+
+    --ff-primary: "Kumbh Sans", sans-serif; 
+
+    --fw-bold: 400; 
+    --fw-bolder: 700; 
+}
+
+
+*, *::before, *::after{box-sizing: border-box;}
+
+*{
+    font: inherit; 
+    margin: 0; 
+}
+
+body{
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    display: grid; 
+    background-size: contain;    
+    place-items: center;
+    background-color: var(--clr-primary-200);
+    min-height: 100vh;
+    line-height: 1.5rem;
+    color: var(--clr-primary-600); 
+    font-family: var(--ff-primary);
+}
+    
+@media(min-width: 300px){
+    body{
+        background-position: -25rem -20rem, 20rem 30rem;
+    }
+}
+    
+
+@media(min-width: 1200px){
+    body{
+        background-size: cover;
+        background-position: -55rem -75rem, 47rem 20rem;
+    }
+}
+
+img{
+    max-inline-size: 100%;
+    block-size: auto;
+    display: block; 
+}
+
+main{
+    position: relative;
+}
+
+article{
+    position: relative; 
+    margin-inline: 1rem;
+    border-radius: 10px; 
+    overflow: hidden;
+    background-color: var(--clr-neutral-100);
+}
+
+.user{
+    position: absolute; 
+    top: 5rem; 
+    left: 50%; 
+    transform: translate(-50%);
+}
+
+.user img{
+    border: 5px solid var(--clr-neutral-100); 
+    border-radius: 5rem; 
+}
+
+.content{
+    padding-block-start: 4rem;
+    text-align: center; 
+}
+
+.user-info{
+    padding-block-end: 2rem; 
+}
+
+h1{
+    font-size: 1.2rem;
+    color: var(--clr-primary-400);
+    font-weight: var(--fw-bolder); 
+}
+
+h1 > span{
+    font-weight: var(--fw-bold);
+}
+
+
+.user-info p{
+    padding-block-start: 0.5rem; 
+
+}
+.social-stats{
+    padding-block: 2rem;
+    border-top: 1px solid var(--clr-neutral-50);
+    display: flex; 
+    justify-content: space-evenly;
+    font-size: 0.785rem;
+}
+
+.social-stats p > span{
+    font-weight: var(--fw-bolder);
+    font-size: 1.2rem;
+    color: var(--clr-primary-400); 
+}
+
+
